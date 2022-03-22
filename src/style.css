@@ -1,9 +1,22 @@
 body {
   font-family: "Arimo", sans-serif;
-  background: #faf6e9;
+  background: #fffbfe;
+}
+
+.theme-button {
+  position: absolute;
+  width: 3%;
+}
+.btn-dark {
+  left: 20px;
+  border-color: #fff;
+}
+.btn-light {
+  left: 60px;
+  border-color: #111;
 }
 h1 {
-  color: #494949;
+  color: #57535c;
   font-size: 24px;
   font-weight: 150;
   line-height: 28px;
@@ -14,23 +27,23 @@ ul {
   margin: 0 0 10px;
 }
 li {
-  color: #494949;
+  color: #57535c;
   font-size: 16px;
   font-weight: 150;
   height: 19px;
   line-height: 1;
   list-style: none;
 }
-li::first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 .weather-app {
-  border: 1px solid #fffdf6;
+  border: 1px solid #eceaff;
   padding: 15px;
   margin: 20px auto;
   max-width: 600px;
   border-radius: 10px;
-  background: #ece8d9;
+  background: #f6edff;
 }
 .temperature {
   color: #494949;
@@ -69,54 +82,54 @@ li::first-letter {
 }
 
 .search-button {
-  background-color: #494949;
+  background-color: #6750a4;
   color: #fff;
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
 }
 .search-button:hover {
-  background-color: #353131;
+  background-color: #4f378b;
 }
 .search-button:focus {
-  background-color: #494949;
+  background-color: #6750a4;
   color: #fff;
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
 }
 .current-button {
-  background-color: #7c6565;
+  background-color: #9a82db;
   color: #fff;
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
 }
 .current-button:focus {
-  background-color: #7c6565;
+  background-color: #9a82db;
   color: #fff;
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
 }
 .current-button:hover {
-  background-color: #6b5454;
+  background-color: #8069bf;
 }
 .type {
   border-color: #1e56a0;
 }
 .source-link {
-  color: #494949;
+  color: #57535c;
   padding: 15px;
   margin: 20px auto;
   margin-left: 250px;
 }
 .github-link {
-  color: #7c6565;
+  color: #4f378b;
 }
 .github-link:hover {
   font-weight: bolder;
-  color: #7c6565;
+  color: #4f378b;
 }
 .weather-forecast {
   margin-top: 20px;
@@ -132,4 +145,16 @@ li::first-letter {
 }
 .weather-forecast-temperature-min {
   opacity: 0.7;
+}
+.col-2 {
+  background-color: #fffbfe;
+  padding: 0px;
+  margin: 3px;
+  width: 15.2%;
+  border-radius: 10%;
+}
+.row.forecast {
+  margin: 0px;
+  position: relative;
+  right: -6px;
 }

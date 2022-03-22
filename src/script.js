@@ -63,14 +63,16 @@ function formatDate(timestamp) {
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row forecast">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
         `
-        <div class="col-2">
-          <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <div class="col-2 forecast-background" id="col-2">
+          <div class="weather-forecast-date" id="weather-forecast-date">${formatDay(
+            forecastDay.dt
+          )}</div>
             <img src="https://openweathermap.org/img/wn/${
               forecastDay.weather[0].icon
             }@2x.png" alt="icon" width="42" />
@@ -148,8 +150,10 @@ function displayPositionForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-        <div class="col-2">
-          <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <div class="col-2 forecast-background" id="col-2">
+          <div class="weather-forecast-date" id="weather-forecast-date">${formatDay(
+            forecastDay.dt
+          )}</div>
             <img src="https://openweathermap.org/img/wn/${
               forecastDay.weather[0].icon
             }@2x.png" alt="icon" width="42" />
@@ -216,6 +220,7 @@ currentButton.addEventListener("click", searchCurrent);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
@@ -237,3 +242,47 @@ function convertToCelsius(event) {
 }
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+function turnDark(event) {
+  event.preventDefault();
+
+  document.getElementById("body").style.background = "rgb(18, 18, 18)";
+  document.getElementById("weather-app").style.background = "rgb(29, 29, 29)";
+  document.getElementById("source-link").style.color = "rgb(128, 105, 191)";
+
+  document.getElementById("fahrenheit-link").style.color =
+    "rgb(128, 105, 191, 0.8)";
+  document.getElementById("celsius-link").style.color =
+    "rgb(128, 105, 191, 0.8)";
+
+  let textTheme = Array.from(document.getElementsByClassName("text-theme"));
+  let forecast = Array.from(
+    document.getElementsByClassName("forecast-background")
+  );
+  let forecastDate = Array.from(
+    document.getElementsByClassName("weather-forecast-date")
+  );
+  let forecastTemperatures = Array.from(
+    document.getElementsByClassName("weather-forecast-temperatures")
+  );
+  let githubLink = Array.from(document.getElementsByClassName("github-link"));
+
+  textTheme.forEach((text) => {
+    text.style.color = "rgb(128, 105, 191)";
+  });
+  forecast.forEach((forecast) => {
+    forecast.style.background = "rgb(208, 188, 255)";
+    forecast.style.color = "rgb(29, 29, 29)";
+  });
+  forecastDate.forEach((date) => {
+    date.style.color = "rgb(5, 5, 5)";
+  });
+  forecastTemperatures.forEach((temp) => {
+    temp.style.color = "rgb(5, 5, 5)";
+  });
+  githubLink.forEach((links) => {
+    links.style.color = "rgb(208, 188, 255)";
+  });
+}
+let darkButton = document.querySelector(".btn-dark");
+darkButton.addEventListener("click", turnDark);
