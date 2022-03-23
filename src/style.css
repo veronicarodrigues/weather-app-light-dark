@@ -1,20 +1,35 @@
 body {
   font-family: "Arimo", sans-serif;
   background: #fffbfe;
+  color: #9a82db;
+  transition-delay: 1s;
 }
 
-.theme-button {
-  position: absolute;
-  width: 3%;
+body.dark {
+  background: rgb(18, 18, 18);
+  transition: 1s;
 }
-.btn-dark {
-  left: 20px;
-  border-color: #fff;
+
+.weather-app {
+  border: 1px solid #eceaff;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  background: #f6edff;
 }
-.btn-light {
-  left: 60px;
-  border-color: #111;
+
+.weather-app.dark {
+  background: rgb(29, 29, 29);
+  transition: 1s;
 }
+
+.search-city-input.dark {
+  background: #111;
+  transition: 1s;
+  border: 1px solid #eceaff;
+}
+
 h1 {
   color: #57535c;
   font-size: 24px;
@@ -22,6 +37,12 @@ h1 {
   line-height: 28px;
   margin: 0;
 }
+
+h1.dark {
+  color: rgb(208, 188, 255);
+  transition: 1s;
+}
+
 ul {
   padding: 0;
   margin: 0 0 10px;
@@ -37,14 +58,50 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
-.weather-app {
-  border: 1px solid #eceaff;
-  padding: 15px;
-  margin: 20px auto;
-  max-width: 600px;
-  border-radius: 10px;
-  background: #f6edff;
+
+li.dark {
+  color: rgb(208, 188, 255);
+  transition: 1s;
 }
+
+span.dark {
+  color: rgb(208, 188, 255);
+  transition: 1s;
+}
+
+a.dark {
+  color: rgb(208, 188, 255);
+  transition: 1s;
+}
+
+small.dark {
+  color: rgb(128, 105, 191);
+  transition: 1s;
+}
+
+.theme-toggle-button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0.3em;
+  border: none;
+  outline: none;
+  transition: 1s;
+  position: relative;
+  left: 120px;
+  top: 30px;
+  background: rgb(29, 29, 29);
+  color: #fff;
+}
+
+.theme-toggle-button.dark {
+  background: #fff;
+  color: rgb(29, 29, 29);
+}
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+  transform: scale(1.1);
+}
+
 .temperature {
   color: #494949;
   font-size: 48px;
@@ -122,7 +179,7 @@ li:first-letter {
   color: #57535c;
   padding: 15px;
   margin: 20px auto;
-  margin-left: 250px;
+  margin-left: 330px;
 }
 .github-link {
   color: #4f378b;
@@ -152,6 +209,9 @@ li:first-letter {
   margin: 3px;
   width: 15.2%;
   border-radius: 10%;
+}
+.col-2.dark {
+  background: rgb(208, 188, 255);
 }
 .row.forecast {
   margin: 0px;

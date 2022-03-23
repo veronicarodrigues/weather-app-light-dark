@@ -246,7 +246,6 @@ celsiusLink.addEventListener("click", convertToCelsius);
 function turnDark(event) {
   event.preventDefault();
 
-  document.getElementById("body").style.background = "rgb(18, 18, 18)";
   document.getElementById("weather-app").style.background = "rgb(29, 29, 29)";
   document.getElementById("source-link").style.color = "rgb(128, 105, 191)";
 
@@ -266,6 +265,9 @@ function turnDark(event) {
     document.getElementsByClassName("weather-forecast-temperatures")
   );
   let githubLink = Array.from(document.getElementsByClassName("github-link"));
+  let seacrhCityInput = Array.from(
+    document.getElementsByClassName("search-city-input")
+  );
 
   textTheme.forEach((text) => {
     text.style.color = "rgb(128, 105, 191)";
@@ -283,6 +285,34 @@ function turnDark(event) {
   githubLink.forEach((links) => {
     links.style.color = "rgb(208, 188, 255)";
   });
+  seacrhCityInput.forEach((search) => {
+    search.style.color = "rgb(202, 197, 202";
+    search.style.background = "rgb(96, 93, 98, 0.2)";
+    search.style.border = "1px solid white";
+  });
 }
-let darkButton = document.querySelector(".btn-dark");
-darkButton.addEventListener("click", turnDark);
+
+document.querySelector(".theme-toggle-button").addEventListener("click", () => {
+  document.querySelector("body").classList.toggle("dark");
+  document.querySelector(".weather-app").classList.toggle("dark");
+  document.querySelector(".search-city-input").classList.toggle("dark");
+  document.querySelector(".theme-toggle-button").classList.toggle("dark");
+  document.querySelector("h1").classList.toggle("dark");
+  document.querySelector("small").classList.toggle("dark");
+  const li = document.querySelectorAll("li");
+  li.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+  const span = document.querySelectorAll("span");
+  span.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+  const a = document.querySelectorAll("a");
+  a.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+  const forecastCol = document.querySelectorAll(".col-2");
+  forecastCol.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+});
