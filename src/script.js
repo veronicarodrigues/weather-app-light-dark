@@ -296,6 +296,8 @@ document.querySelector(".theme-toggle-button").addEventListener("click", () => {
   document.querySelector("body").classList.toggle("dark");
   document.querySelector(".weather-app").classList.toggle("dark");
   document.querySelector(".search-city-input").classList.toggle("dark");
+  document.querySelector(".moon").classList.toggle("dark");
+  document.querySelector(".sun").classList.toggle("dark");
   document.querySelector(".theme-toggle-button").classList.toggle("dark");
   document.querySelector("h1").classList.toggle("dark");
   document.querySelector("small").classList.toggle("dark");
@@ -313,6 +315,28 @@ document.querySelector(".theme-toggle-button").addEventListener("click", () => {
   });
   const forecastCol = document.querySelectorAll(".col-2");
   forecastCol.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+  const sunMoonContainer = document.querySelectorAll(".sun-moon-container");
+  sunMoonContainer.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+  const weatherForecastDate = document.querySelectorAll(
+    ".weather-forecast-date"
+  );
+  weatherForecastDate.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+  const weatherForecastTempMin = document.querySelectorAll(
+    ".weather-forecast-temperature-min"
+  );
+  weatherForecastTempMin.forEach((el) => {
+    el.classList.toggle("dark");
+  });
+  const weatherForecastTempMax = document.querySelectorAll(
+    ".weather-forecast-temperature-max"
+  );
+  weatherForecastTempMax.forEach((el) => {
     el.classList.toggle("dark");
   });
 });

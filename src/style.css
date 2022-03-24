@@ -2,7 +2,8 @@ body {
   font-family: "Arimo", sans-serif;
   background: #fffbfe;
   color: #9a82db;
-  transition-delay: 1s;
+  transition: 1s;
+  overflow: hidden;
 }
 
 body.dark {
@@ -17,6 +18,7 @@ body.dark {
   max-width: 600px;
   border-radius: 10px;
   background: #f6edff;
+  transition: 1s;
 }
 
 .weather-app.dark {
@@ -36,6 +38,7 @@ h1 {
   font-weight: 150;
   line-height: 28px;
   margin: 0;
+  transition: 1s;
 }
 
 h1.dark {
@@ -46,6 +49,7 @@ h1.dark {
 ul {
   padding: 0;
   margin: 0 0 10px;
+  transition: 1s;
 }
 li {
   color: #57535c;
@@ -54,9 +58,11 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+  transition: 1s;
 }
 li:first-letter {
   text-transform: capitalize;
+  transition: 1s;
 }
 
 li.dark {
@@ -96,6 +102,7 @@ small.dark {
 .theme-toggle-button.dark {
   background: #fff;
   color: rgb(29, 29, 29);
+  transition: 1s;
 }
 .theme-toggle-button:hover,
 .theme-toggle-button:focus {
@@ -107,35 +114,43 @@ small.dark {
   font-size: 48px;
   font-weight: 400px;
   line-height: 60px;
+  transition: 1s;
 }
 .temp-link {
   text-decoration: none;
   color: rgb(73, 73, 73, 0.8);
+  transition: 1s;
 }
 .temp-link:hover {
   text-decoration: underline;
   font-weight: bold;
   color: rgb(73, 73, 73, 1);
+  transition: 1s;
 }
 .active {
   cursor: default;
   font-weight: bold;
   color: rgb(73, 73, 73, 1);
+  transition: 1s;
 }
 .active:hover {
   text-decoration: none;
+  transition: 1s;
 }
 .icon {
   height: 64px;
   width: 64px;
   vertical-align: top;
+  transition: 1s;
 }
 .units {
   position: relative;
   top: -25px;
+  transition: 1s;
 }
 .search-form {
   margin-bottom: 20px;
+  transition: 1s;
 }
 
 .search-button {
@@ -144,9 +159,11 @@ small.dark {
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
+  transition: 1s;
 }
 .search-button:hover {
   background-color: #4f378b;
+  transition: 1s;
 }
 .search-button:focus {
   background-color: #6750a4;
@@ -154,6 +171,7 @@ small.dark {
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
+  transition: 1s;
 }
 .current-button {
   background-color: #9a82db;
@@ -161,6 +179,7 @@ small.dark {
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
+  transition: 1s;
 }
 .current-button:focus {
   background-color: #9a82db;
@@ -168,40 +187,73 @@ small.dark {
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
+  transition: 1s;
 }
 .current-button:hover {
   background-color: #8069bf;
+  transition: 1s;
 }
 .type {
   border-color: #1e56a0;
+  transition: 1s;
 }
 .source-link {
   color: #57535c;
   padding: 15px;
   margin: 20px auto;
   margin-left: 330px;
+  transition: 1s;
 }
 .github-link {
   color: #4f378b;
+  transition: 1s;
 }
 .github-link:hover {
   font-weight: bolder;
   color: #4f378b;
+  transition: 1s;
 }
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
   color: #494949;
+  transition: 1s;
 }
 .weather-forecast-date {
   font-size: 16px;
   opacity: 0.7;
+  transition: 1s;
+}
+.weather-forecast-date.dark {
+  color: #111;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: 1s;
 }
 .weather-forecast-temperatures {
   font-size: 13px;
+  transition: 1s;
+}
+.weather-forecast-temperatures.dark {
+  font-size: 13px;
+  transition: 1s;
+  color: #111;
 }
 .weather-forecast-temperature-min {
   opacity: 0.7;
+  transition: 1s;
+}
+.weather-forecast-temperature-min.dark {
+  opacity: 0.7;
+  transition: 1s;
+}
+.weather-forecast-temperature-max {
+  opacity: 1;
+  transition: 1s;
+}
+.weather-forecast-temperature-max.dark {
+  opacity: 1;
+  transition: 1s;
 }
 .col-2 {
   background-color: #fffbfe;
@@ -209,12 +261,68 @@ small.dark {
   margin: 3px;
   width: 15.2%;
   border-radius: 10%;
+  transition: 1s;
 }
 .col-2.dark {
   background: rgb(208, 188, 255);
+  transition: 1s;
 }
 .row.forecast {
   margin: 0px;
   position: relative;
   right: -6px;
+  transition: 1s;
+}
+
+.sun-moon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 200vmin;
+  pointer-events: none;
+  transform: rotate(0);
+  transition: 1s;
+}
+
+.sun-moon-container.dark {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+.sun,
+.moon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  transition: 1s;
+}
+
+.sun {
+  top: 2%;
+  right: 50%;
+  opacity: 1;
+  transition: 1s;
+}
+
+.sun.dark {
+  opacity: 0;
+  transition: 1s;
+}
+
+.moon {
+  bottom: 5%;
+  opacity: 0;
+  transition: 1s;
+  transform: rotate(180deg);
+}
+
+.moon.dark {
+  bottom: 2%;
+  right: 50%;
+  opacity: 1;
+  transition: 1s;
 }
