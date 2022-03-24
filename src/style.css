@@ -62,7 +62,6 @@ li {
 }
 li:first-letter {
   text-transform: capitalize;
-  transition: 1s;
 }
 
 li.dark {
@@ -77,7 +76,6 @@ span.dark {
 
 a.dark {
   color: rgb(208, 188, 255);
-  transition: 1s;
 }
 
 small.dark {
@@ -114,28 +112,23 @@ small.dark {
   font-size: 48px;
   font-weight: 400px;
   line-height: 60px;
-  transition: 1s;
 }
 .temp-link {
   text-decoration: none;
   color: rgb(73, 73, 73, 0.8);
-  transition: 1s;
 }
 .temp-link:hover {
   text-decoration: underline;
   font-weight: bold;
   color: rgb(73, 73, 73, 1);
-  transition: 1s;
 }
 .active {
   cursor: default;
   font-weight: bold;
   color: rgb(73, 73, 73, 1);
-  transition: 1s;
 }
 .active:hover {
   text-decoration: none;
-  transition: 1s;
 }
 .icon {
   height: 64px;
@@ -146,11 +139,9 @@ small.dark {
 .units {
   position: relative;
   top: -25px;
-  transition: 1s;
 }
 .search-form {
   margin-bottom: 20px;
-  transition: 1s;
 }
 
 .search-button {
@@ -163,7 +154,6 @@ small.dark {
 }
 .search-button:hover {
   background-color: #4f378b;
-  transition: 1s;
 }
 .search-button:focus {
   background-color: #6750a4;
@@ -171,7 +161,6 @@ small.dark {
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
-  transition: 1s;
 }
 .current-button {
   background-color: #9a82db;
@@ -187,11 +176,9 @@ small.dark {
   box-shadow: rgb(37, 39, 89 / 8%) 0px 8px 8px 0;
   transition: all 200ms ease-in-out;
   border-color: #f6f6f6;
-  transition: 1s;
 }
 .current-button:hover {
   background-color: #8069bf;
-  transition: 1s;
 }
 .type {
   border-color: #1e56a0;
@@ -202,16 +189,13 @@ small.dark {
   padding: 15px;
   margin: 20px auto;
   margin-left: 330px;
-  transition: 1s;
 }
 .github-link {
   color: #4f378b;
-  transition: 1s;
 }
 .github-link:hover {
   font-weight: bolder;
   color: #4f378b;
-  transition: 1s;
 }
 .weather-forecast {
   margin-top: 20px;
