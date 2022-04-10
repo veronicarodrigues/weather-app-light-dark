@@ -28,6 +28,7 @@ body.dark {
 
 .search-city-input.dark {
   background: #111;
+  color: #eceaff;
   transition: 1s;
   border: 1px solid #eceaff;
 }
